@@ -1,9 +1,15 @@
 import sqlite3
+from pathlib import Path # Importamos la herramienta para manejar rutas
 
 def inicializar_base_datos():
-    conexion = sqlite3.connect('farmacia_conciliacion.db')
+   
+    directorio_actual = Path(__file__).parent   
+   
+    ruta_db = directorio_actual.parent.parent / 'data' / 'farmacia_conciliacion.db'
+   
+    conexion = sqlite3.connect(ruta_db)
     cursor = conexion.cursor()
-
+    
     # Tabla 1: Obras Sociales 
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS obras_sociales (
