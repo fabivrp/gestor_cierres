@@ -17,7 +17,34 @@ def cargar_datos_iniciales():
     try:
         cursor.execute('''
         INSERT INTO obras_sociales (nombre, porcentaje_comision) 
-        VALUES ('OSDEPYM', 0.15)
+        VALUES ('ASI', 0.18),
+        ('AVALIAN', 0.05),
+        ('ASMEPRIV', 0.21),
+        ('BRISTOL MEDICINE', 0.21),
+        ('CASA', 0.10),
+        ('GALENO', 0.17),
+        ('SWISS MEDICAL', 0.17),
+        ('OSDE', 0.17),
+        ('LUIS PASTEUR', 0.18),
+        ('UNION PERSONAL', 0.13),
+        ('POLICIA FEDERAL', 0.125),
+        ('OSRJA', 0.21),
+        ('OSPIHMP', 0.18),
+        ('OSPE', 0.18),
+        ('OSPA', 0.18),
+        ('OSPETELCO', 0.18),
+        ('OSDOP', 0.19),
+        ('JUBILADOS TELEFONICOS', 0.18),
+        ('OSPPCYQ', 0.19),
+        ('WILLIAM HOPE', 0.18),
+        ('MEDIFE', 0.1),
+        ('OSMATA', 0.16),
+        ('PODER JUDICIAL', 0.15),
+        ('BANCO PROVINCIA', 0.08),
+        ('SAMI', 0.18),
+        ('OMINT', 0.19),
+        ('OSPATCA', 0.15),
+        ('RECETARIO SOLIDARIO', 0.1)
         ''')
         conexion.commit()
         print("Obra social agregada con éxito.\n")
